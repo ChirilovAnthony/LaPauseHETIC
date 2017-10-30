@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pause ? Cours ?</title>
+</head>
+<body>
+	<div id="hey">C'est pas la pause ! 😅</div>
+	<script type="text/javascript">
+
+		var interval = setInterval(function(){
+			var d = new Date();
+			var heure = d.getHours();
+			var minute = d.getMinutes();
+			var total = heure + ":" + minute;
+			var pause = "11:00";
+			var p = document.querySelector('#hey');
+
+			if( total == pause){
+				p.innerHTML = "C'est la pause ! 🤓";
+			} else {
+				p.innerHTML = "C'est pas la pause ! 😅";
+				console.log("Pas bon !");
+			}
+
+			console.log(total);
+		}, 5000);
+	</script>
+</body>
+</html>
